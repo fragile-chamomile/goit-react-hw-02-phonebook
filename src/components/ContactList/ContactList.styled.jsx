@@ -1,11 +1,15 @@
 import styled from '@emotion/styled';
 
+export const List = styled.ul`
+  padding-left: 0;
+  text-align: center;
+`;
+
 export const Item = styled.li`
-  display: flex;
   margin-bottom: 20px;
 `;
 
-export const Contact = styled.p`
+export const Contact = styled.span`
   margin: 0;
   margin-right: 20px;
 `;

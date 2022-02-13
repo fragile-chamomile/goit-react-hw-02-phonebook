@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Item, Contact, Button } from './ContactList.styled.jsx';
+import { List, Item, Contact, Button } from './ContactList.styled';
 
 const ContactList = ({ contacts, onDeleteContactlist }) => (
-  <ul>
+  <List>
     {contacts.map(({ id, name, number }) => (
       <Item key={id}>
         <Contact>
@@ -12,7 +12,7 @@ const ContactList = ({ contacts, onDeleteContactlist }) => (
         <Button onClick={() => onDeleteContactlist(id)}>Delete</Button>
       </Item>
     ))}
-  </ul>
+  </List>
 );
 
 ContactList.propTypes = {
