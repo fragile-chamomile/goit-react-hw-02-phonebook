@@ -24,17 +24,18 @@ class App extends Component {
       number,
     };
 
-    this.setState(({ contacts }) => ({
-      contacts: [...contacts, contact],
-    }));
-
     const dublicateName = this.state.contacts.find(contact => {
       return contact.name.toLowerCase() === name.toLowerCase();
     });
 
     if (dublicateName) {
       alert(`${name} is already in contacts.`);
+      return;
     }
+
+    this.setState(({ contacts }) => ({
+      contacts: [...contacts, contact],
+    }));
   };
 
   deleteContactItem = ContactItemId => {
